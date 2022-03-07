@@ -35,8 +35,10 @@ export async function getCustomersId(req, res) {
 		if (result.rows.length === 0) {
 			return res.sendStatus(404);
 		}
+		console.log(result.rows[0]);
+		console.log(result.rows[0]);
 
-		res.send(result.rows);
+		res.send(result.rows[0]);
 	} catch (err) {
 		console.log(err);
 		res.sendStatus(500);
